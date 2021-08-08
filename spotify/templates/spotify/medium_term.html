@@ -1,0 +1,64 @@
+{%extends "spotify/header.html"%}
+
+
+{%block content%}
+
+
+
+  <div id="biography">
+      <h3 id="bio-title"> Biographify Series</h3>
+      <h4 id="time-frame"> Book Two: Six Months </h4>
+      <h5 id="author"> by {{username}} </h5>
+      
+      <div id="content-div">
+        <p id="contents"> Contents </p>
+        <hr> </hr>
+      </div>
+      <table id="paper">
+    
+        {%for song, duration in songs%}
+            {%if forloop.counter == 1%}
+            <tr>
+              <td id="chapter"> </td>
+              <td id="song"> Introduction</td>
+              <td id="duration"> ix </td>
+            </tr>
+            {%endif%}
+            <tr>
+              <td id="chapter"> Chapter {{forloop.counter}} </td>
+              <td id="song">{{song}}</td>
+              <td id="duration">{{duration}} </td>
+        {%endfor%}
+            </tr>
+      </table>
+
+      <div id="blank-space">
+        
+      </div>
+      <p> xxi </p>
+  </div>
+  <div id="btn-div">
+    <button id="download"> Download Image </button>
+
+    <script>
+      downloadBtn = document.querySelector("#download")
+      downloadBtn.addEventListener("click", function(){
+      html2canvas(document.querySelector("#biography")).then(canvas => {
+        document.body.appendChild(canvas);
+        const a = document.createElement("a");
+        document.body.appendChild(a);
+        a.href = canvas.toDataURL();
+        a.download = "medium-term.png";
+        document.body.removeChild(a);
+        document.body.removeChild(canvas);
+        a.click();
+          });
+        });
+    
+    </script>
+  </div>
+
+
+
+
+{%endblock content%}
