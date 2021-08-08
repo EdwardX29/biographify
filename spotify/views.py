@@ -25,7 +25,6 @@ def authorize(request):
 
 
 def callback(request):
-    global access_token
     code = request.GET.get("code")
     
     response = requests.post(
@@ -49,8 +48,8 @@ def callback(request):
     return render(request,"spotify/callback.html")
 
 def short_term(request):
-    token = request.session["token"]
     try:
+        token = request.session["token"]
         songs = getSongs(token, "short_term")
     except:
         return redirect("spotify:index")
@@ -63,8 +62,8 @@ def short_term(request):
     
 
 def medium_term(request):
-    token = request.session["token"]
     try:
+        token = request.session["token"]
         songs = getSongs(token, "medium_term")
     except:
         return redirect("spotify:index")
@@ -77,8 +76,9 @@ def medium_term(request):
     
 
 def long_term(request):
-    token = request.session["token"]
+    
     try:
+        token = request.session["token"]
         songs  = getSongs(token, "long_term")
     except:
         return redirect("spotify:index")
