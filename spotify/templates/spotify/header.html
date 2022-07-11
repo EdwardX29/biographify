@@ -1,0 +1,22 @@
+{%load static%}
+
+<title> Biographify</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.2.1/html2canvas.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{%static 'css/header.css'%}"> 
+
+<div class="header">
+
+  <h1 id="main-header"> Biographify </h1>
+  <h2 id="lesser-header"> Top Track Generator </h2>
+
+  <div id="time-options">
+    <button class="time-item" id="short-term"> <a class="time-link" href="{%url 'spotify:short_term'%}"> Last Month</a> </button>
+    <button class="time-item" id="medium-term"> <a class="time-link" href="{%url 'spotify:medium_term'%}"> Last Six Months</a> </button>
+    <button class="time-item" id="long-term"> <a class="time-link" href="{%url 'spotify:long_term'%}"> All Time</a> </button>
+  </div>
+
+</div>
+{%block content%}
+
+{%endblock content%}

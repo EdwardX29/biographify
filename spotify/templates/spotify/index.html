@@ -1,0 +1,20 @@
+{%load static%}
+<title>Biographify</title>
+
+<link rel="stylesheet" type="text/css" href="{%static 'css/index.css'%}"> </link>
+
+<div id="header">
+  <h1 id="main-header"> Biographify </h1>
+  <h2 id="lesser-header"> Top Track Generator </h2>
+  
+  <form method="post" id="name-form">
+      {%csrf_token%}
+      <input placeholder="Enter your name" name="name" id="name"> </input>
+      <br> <br>
+      <input type="submit" id="submit"> </input>
+      
+  </form>
+  <p class="about"> Biographify is a pet project created by Edward Xiao </p>
+  <p class="about"> This project was fully inspired by Michelle Liu's <a id="inspire" target="blank_"href="https://receiptify.herokuapp.com/">Receiptify </a>App </p>
+</div>
+

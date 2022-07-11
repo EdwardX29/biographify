@@ -1,0 +1,63 @@
+#header{
+    display:flex;
+    align-items:center;
+    flex-direction: column;
+  }
+  #main-header{
+    font-family: Helvetica, Sans-Serif;
+    text-align:center;
+    margin: 0.2vw;
+    font-weight: 500;
+  }
+  #lesser-header{
+    font-family: Helvetica, Sans-Serif;
+    text-align:center;
+    margin: 0.3vw;
+    font-weight: 400;
+  }
+
+  #login-btn{
+    background-color:rgb(70, 210, 70);
+    border-radius:10px;
+    padding: 1vh 5vh;
+    font-size: 20px;
+  }
+
+  #login-btn:hover{
+    background-color: rgb(153, 230, 153);
+  }
+
+  #login-link{
+    color: white;
+    text-decoration:none;
+    font-size: 25px;
+  }
+
+  .about{
+    font-family: Helvetica, Sans-Serif;
+    position:relative;
+    top: 80px;
+  }
+
+  #name{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size:20
+  }
+
+  #name-form{
+    display:flex;
+    flex-direction:column;
+    margin-top:10px;
+  }
+  #submit{
+    background-color:rgb(70, 210, 70);
+    border-radius:10px;
+    padding: 1vh 5vh;
+    font-size: 20px;
+    color:white;
+    align-items:center;
+    text-align:center;
+  }
