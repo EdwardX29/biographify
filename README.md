@@ -1,6 +1,6 @@
 # Biographify [website](https://biographify.herokuapp.com)
 
-![Project Image](https://raw.githubusercontent.com/EdwardX29/biographify/main/.github/images/projectImage.png)
+![Project Image](https://raw.githubusercontent.com/EdwardX29/biographify/master/.github/images/projectImage.png)
 
 ---
 
